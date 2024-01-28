@@ -8,36 +8,79 @@
             #center {
                 text-align: center;
             }
-            h1, a, p {
+            body {
                 font-family: Arial;
+                background-color: #333333;
+                color: #ffffff;
             }
+            a {
+                color: #ffffff;
+            }
+                a:hover {
+                    color: #d4d4d4;
+                }
             footer {
                 text-align: center;
-                background-color: #e5e5e5;
+                background-color: #7c7c7c;
                 color: white;
                 height: 60px;
                 padding-top: 18px;
                 font-size: 16px;
+                border-style: solid;
+                border-color: #ffffff;
             }
                 footer a {
-                    color: black;
+                    color: #ffffff;
                     cursor: pointer;
                 }
-            .spacer {
+                    footer a:hover {
+                        color: #d4d4d4;
+                    }
+            .spacer300 {
                 height: 300px;
             }
+            .spacer {
+                height: 60px;
+            }
+            #button {
+                font-weight: bold;
+                width: 800px;
+                margin: 40px auto 0 auto;
+            }
+
+                #button a {
+                    -webkit-transition: all 200ms ease-out;
+                    -ms-transition: all 200ms ease-out;
+                    transition: all 200ms ease-out;
+                    padding: 20px 40px;
+                    color: white;
+                    text-decoration: none;
+                    font-family: Arial;
+                    border-radius: 25px;
+                    background-color: #45c1cc;
+                }
+
+                    #button a:hover {
+                        -webkit-transition: all 200ms ease-out;
+                        -ms-transition: all 200ms ease-out;
+                        transition: all 200ms ease-out;
+                        background-color: #348699;
+                        padding: 20px 40px;
+                    }
         </style>
     </head>
     <body>
         <div id="center">
             <h1>minecraftgoldfish3.github.io</h1> <hr />
             <p>Check out some projects I made or visit my other accounts.</p> <br /> <br />
-            <a href="https://minecraftgoldfish3.github.io/Unblocked">Play Unblocked Games</a> <br />
-            <a href="https://minecraftgoldfish3.github.io/Blocky">Play Blocky</a> <br />
-            <a href="https://minecraftgoldfish3.github.io/Geometry-Dash-Scratch">Play my Geometry Dash recreation in Scratch</a> <br />
-            <a href="https://minecraftgoldfish3.github.io/Projects">View more of the projects I made</a> <br />
+            <div id="button">
+                <a href="https://minecraftgoldfish3.github.io/Unblocked">Play Unblocked Games</a> <br /> <div class="spacer"></div>
+                <a href="https://minecraftgoldfish3.github.io/Blocky">Play Blocky</a> <br /> <div class="spacer"></div>
+                <a href="https://minecraftgoldfish3.github.io/Geometry-Dash-Scratch">Play my Geometry Dash recreation in Scratch</a> <br /> <div class="spacer"></div>
+                <a href="https://minecraftgoldfish3.github.io/Projects">View more of the projects I made</a> <br /> <div class="spacer"></div>
+            </div>
         </div>
-        <div class="spacer"></div>
+        <div class="spacer300"></div>
         <footer>
             <a href="https://scratch.mit.edu/users/MINECRAFTGOLDFISH3/">Scratch</a>
             <a href="https://scratch.mit.edu/users/MINEGOLD3/">Scratch Alt</a>
