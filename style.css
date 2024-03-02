@@ -1,43 +1,35 @@
-#center {
-    text-align: center;
-}
-
 body {
+    background-color: #f4f4f4;
+    color: #333333;
     font-family: Arial;
-    background-color: #333333;
-    color: #ffffff;
 }
-
-a {
-    color: #ffffff;
+#center {
+    width: 80%;
+    margin: auto;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 0 12px #cccccc;
 }
-
-    a:hover {
-        color: #d4d4d4;
-    }
-
 footer {
     text-align: center;
-    background-color: #7c7c7c;
-    color: white;
-    height: 60px;
-    padding-top: 18px;
+    background-color: #efefef;
+    color: #000000;
+    padding: 10px;
     font-size: 16px;
     position: absolute;
-    bottom: 0;
     left: 0;
     right: 0;
-    margin: 0 auto;
+    box-shadow: 0 0 12px #cccccc;
 }
-
-    footer a {
-        color: #ffffff;
+a {
+    color: #007dcc;
+    text-decoration: none;
+}
+    a:hover {
+        color: #016aad;
+        text-decoration: underline;
         cursor: pointer;
     }
-
-        footer a:hover {
-            color: #d4d4d4;
-        }
 
 .spacer300 {
     height: 300px;
