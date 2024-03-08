@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Form Test | minecraftgoldfish3.github.io</title>
+    </head>
+    <body>
+        <form action="https://minecraftgoldfish3.github.io/misc/form/sent.html" method="get">
+            <h1>Form Test</h1>
+            <fieldset>
+                <legend>Text inputs</legend>
+                <p>
+                    Test input text: <input type="text" name="text" size="15" maxlength="30" value="value" required="required" />
+                </p>
+                <p>
+                    Test input password: <input type="password" name="password" size="15" maxlength="30" required="required" />
+                </p>
+                <p>
+                    Test comment: <textarea name="comments" cols="20" rows="4">Enter comments...</textarea>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>More</legend>
+                <p>
+                    Radio input:
+                    <br />
+                    <input type="radio" name="radio" value="option1" checked="checked" /> Option 1
+                    <input type="radio" name="radio" value="option2" /> Option 2
+                    <input type="radio" name="radio" value="option3" /> Option 3
+                </p>
+                <p>
+                    Checkbox input:
+                    <br />
+                    <input type="checkbox" name="checkbox" value="option1" checked="checked" /> Option 1
+                    <input type="checkbox" name="checkbox" value="option2" /> Option 2
+                    <input type="checkbox" name="checkbox" value="option3" /> Option 3
+                </p>
+                <p>Test select:</p>
+                <select name="select">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+                <p>Test date:
+                    <input type="date" name="date" />
+                </p>
+                <p>Test file:</p>
+                <input type="file" name="file" /><br />
+            </fieldset>
+            
+            <br /><br /><br /><input type="submit" name="submit" />
+        </form>
+    </body>
+</html>
