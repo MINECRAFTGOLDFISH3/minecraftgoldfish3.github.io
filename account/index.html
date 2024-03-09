@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Login/Signup | minecraftgoldfish3.github.io</title>
+        <link rel="stylesheet" href="../style.css" />
+        <style>
+            .form_message-error, .form_input-error-message {
+                color: #cc3333;
+            }
+            .form_hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="center">
+            <div class="container">
+                <form action="" class="form" id="login">
+                    <br /><h1 class="form_title">Login</h1>
+                    <div class="form_message form_message-error"></div>
+                    <div class="form_input-group">
+                        <input type="text" class="form_input" autofocus placeholder="Username or email" />
+                        <div class="form_input-error-message"></div><br />
+                    </div>
+                    <div class="form_input-group">
+                        <input type="password" class="form_input" autofocus placeholder="Password" />
+                        <div class="form_input-error-message"></div><br />
+                    </div>
+                    <button class="form_button" type="submit">Continue</button>
+                    <p class="form_text">
+                        <a href="" class="form-link">Forgot your password?</a>
+                    </p>
+                    <p class="form_text">
+                        <a id="link_create_account" class="form-link">Don't have an account? Create account.</a>
+                    </p>
+                </form>
+                <form action="" class="form form_hidden" id="signup">
+                    <br /><h1 class="form_title">Sign Up</h1>
+                    <div class="form_message form_message-error"></div>
+                    <div class="form_input-group">
+                        <input type="text" class="form_input" autofocus placeholder="Username" />
+                        <div class="form_input-error-message"></div><br />
+                    </div>
+                    <div class="form_input-group">
+                        <input type="text" class="form_input" autofocus placeholder="Email Address" />
+                        <div class="form_input-error-message"></div><br />
+                    </div>
+                    <div class="form_input-group">
+                        <input type="password" class="form_input" autofocus placeholder="Password" />
+                        <div class="form_input-error-message"></div><br />
+                    </div>
+                    <div class="form_input-group">
+                        <input type="password" class="form_input" autofocus placeholder="Confirm Password" />
+                        <div class="form_input-error-message"></div><br />
+                    </div>
+                    <button class="form_button" type="submit">Continue</button>
+                    <p class="form_text">
+                        <a id="link_login" class="form-link">Already have an account? Log in instead.</a>
+                    </p>
+                </form>
+            </div>
+            <div class="spacerdown"></div>
+            <footer>
+                <a href="../../index.html">Back to Homepage</a>
+            </footer>
+            <script src="script.js"></script>
+        </div>
+    </body>
+</html>
