@@ -17,10 +17,11 @@
             <h1>minecraftgoldfish3.github.io</h1> <hr />
             <p>Check out some projects I made or visit my other accounts.</p> <br /> <br />
             <div id="button">
-                <a href="https://minecraftgoldfish3.github.io/Activities">Play Games in Activities</a> <br /> <div class="spacer"></div>
+                <a onclick="cloak()">Cloak Puzzlemath Game Website</a> <br /> <div class="spacer"></div>
                 <a href="https://minecraftgoldfish3.github.io/Blocky">Play Blocky</a> <br /> <div class="spacer"></div>
                 <a href="https://minecraftgoldfish3.github.io/Geometry-Dash-Scratch">Play my Geometry Dash recreation in Scratch</a> <br /> <div class="spacer"></div>
-                <a href="https://minecraftgoldfish3.github.io/Unblocked">Play Unblocked Games</a> <br /> <div class="spacer"></div>
+                <a href="https://minecraftgoldfish3.github.io/Activities">Play Games in Activities (Old)</a> <br /> <div class="spacer"></div>
+                <a href="https://minecraftgoldfish3.github.io/Unblocked">Play Unblocked Games (Old)</a> <br /> <div class="spacer"></div>
                 <a href="https://minecraftgoldfish3.github.io/Projects">View more of the projects I made</a> <br /> <div class="spacer"></div>
                 <a href="miscellaneous/index.html">More Stuff</a> <br /> 
                 <div class="spacer300"></div>
@@ -31,5 +32,23 @@
             <a href="https://scratch.mit.edu/users/MINEGOLD3/">Scratch Alt</a> | 
             <a href="https://minecraftgoldfish3.itch.io">Itch.io</a>
         </footer>
+        <script>
+            function cloak() {
+                win = window.open();
+                win.document.body.style.margin = "0";
+                win.document.body.style.height = "100vh";
+                var iframe = win.document.createElement("iframe");
+                iframe.style.border = "none";
+                iframe.style.width = "100%";
+                iframe.style.height = "100%";
+                iframe.style.margin = "0";
+                iframe.referrerpolicy = "no-referrer";
+                iframe.allow = "fullscreen";
+                iframe.src = "https://minecraftgoldfish3.github.io/Puzzlemath";
+                win.document.body.appendChild(iframe);
+                var script = win.document.createElement("script");
+                win.document.body.appendChild(script);
+            }
+        </script>
     </body>
 </html>
