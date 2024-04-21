@@ -1,0 +1,20 @@
+{
+  "name": "minecraftgoldfish3.github.io",
+  "description": "minecraftgoldfish3.github.io",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "yarn",
+    "start": "yarn run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MINECRAFTGOLDFISH3/minecraftgoldfish3.github.io.git"
+  },
+  "keywords": [],
+  "author": "MINECRAFTGOLDFISH3",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/MINECRAFTGOLDFISH3/minecraftgoldfish3.github.io/issues"
+  },
+  "homepage": "https://github.com/MINECRAFTGOLDFISH3/minecraftgoldfish3.github.io"
+}
