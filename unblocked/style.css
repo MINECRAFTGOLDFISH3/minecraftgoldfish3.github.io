@@ -1,0 +1,59 @@
+body {
+	background-color: #333333;
+	font-family: Arial;
+	color: #ffffff;
+}
+
+div#center {
+	text-align: center;
+	font-size: 200%
+}
+
+#button {
+	font-weight: bold;
+	width: 200px;
+	margin: 20px auto 0 auto;
+}
+
+	#button a {
+		-webkit-transition: all 200ms ease-out;
+		-ms-transition: all 200ms ease-out;
+		transition: all 200ms ease-out;
+		padding: 20px 40px;
+		color: white;
+		text-decoration: none;
+		border-radius: 25px;
+		background-color: #45CC83;
+	}
+
+		#button a:hover {
+			-webkit-transition: all 200ms ease-out;
+			-ms-transition: all 200ms ease-out;
+			transition: all 200ms ease-out;
+			background-color: #349963;
+			padding: 20px 40px;
+		}
+
+footer {
+	background-color: #333333;
+	color: #ffffff;
+	font-family: Arial;
+	text-align: center;
+	padding: 1px;
+}
+
+a {
+	color: #ffffff;
+}
+
+.clicker {
+	background-color: #45CC83;
+	color: white;
+	font-family: Arial;
+}
+
+	.clicker:hover {
+		background-color: #349963;
+		color: white;
+		font-family: Arial;
+	}

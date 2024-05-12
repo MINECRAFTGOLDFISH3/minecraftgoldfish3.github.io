@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="manifest" href="site.webmanifest" />
+        <title>404 | Activities</title>
+        <style>
+            #left {
+                text-align: left;
+                position: absolute;
+                width: 250px;
+                height: 1000px;
+                background-color: #333333;
+                top: 75px;
+                left: 0px;
+                opacity: 0%;
+            }
+            #right {
+                text-align: right;
+                position: absolute;
+                width: 250px;
+                height: 1000px;
+                background-color: #333333;
+                top: 75px;
+                padding-right: 0px;
+                right: 0;
+                opacity: 0%;
+            }
+            #center {
+                text-align: center;
+                position: absolute;
+                width: 700px;
+                height: 1000px;
+                background-color: #454545;
+                top: 75px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: 0 auto;
+            }
+            #center2 {
+                text-align: center;
+                position: absolute;
+                height: 1000px;
+                background-color:#333333;
+                top: 75px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+            }
+            
+            body {
+                color: white;
+                background-color: #333333;
+                font-family: Arial;
+            }
+            
+            header {
+                background-color: #454545;
+                top: 0px;
+                left: 0px;
+                right: 0;
+            }
+            
+            #header-right {
+                display: inline-block;
+                text-align: right;
+                margin: 0px 20px;
+            }
+            
+            a {
+                color: white;
+                font-family: Arial;
+            }
+            
+            a:hover {
+                color: #d2d2d2;
+            }
+            
+            #spacer {
+                height: 300px;
+            }
+            #spacer50 {
+                height: 50px;
+            }
+            
+            #big {
+                font-size: 200%;
+            }
+            
+            footer {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                text-align: center;
+                background-color: #454545;
+                color: white;
+                height: 60px;
+                padding-top: 18px;
+                font-size: 16px;
+            }
+            
+            iframe#game {
+                left: 0;
+                right: 0;
+            }
+            
+            #gametile {
+                background-color: #454545;
+            }
+            
+            #cookiepopup {
+                background-color: black;
+                position: fixed;
+                padding: 10px;
+                bottom: 0px;
+                right: 0px;
+                left: 0px;
+                font-size: 80%;
+                width: auto;
+                text-align: center;
+            }
+            #form {
+                text-align: center;
+                background-color: #f0ebf8;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="/">Home</a> | <a href="/Activities/all.html">All Games</a> <a href="/Activities/unity.html">Unity Games</a> <a href="/Activities/io.html">Io Games</a> <a href="/Activities/html5.html">HTML5 Games</a> <a href="/Activities/ruffle.html">Flash Games</a> | <a href="/Activities/misc.html">Miscellaneous</a>
+        </header>
+        <div id="left"></div>
+        <div id="center">
+            <h1>404 Error</h1><hr />
+            <p>Not Found.</p>
+            <button onclick="showForm('form')">If you think this is a problem, report this here.</button><br /><br />
+            <div id="form"><iframe id="form" src="https://docs.google.com/forms/d/e/1FAIpQLSdZR_nhJ3VYORO28PBbbdMpASs2R2wYvXZuKZTfv5fJJXR42A/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
+        </div>
+        <div id="right"></div>
+        <script>
+            document.getElementById('form').style.display = 'none';
+            function showForm(id) {
+                document.getElementById(id).style.display = 'block';
+            }
+        </script>
+    </body>
+</html>

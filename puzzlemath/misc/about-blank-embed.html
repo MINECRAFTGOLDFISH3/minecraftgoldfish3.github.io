@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../style.css" />
+    <title>About:Blank Embedder | Puzzlemath</title>
+  </head>
+  <body>
+      <div id="center">
+          <br />
+          <h1>About:Blank Embedder</h1><hr />
+          <p><input id="url-target" placeholder="enter a url..." autocomplete="on" type="text" autofocus /></p>
+          <button id="create">Create page</button>
+          <button onclick="document.getElementById('url-target').value = ''">Clear input</button>
+          <div class="spacerdown"></div>
+      </div>
+      <footer><a href="../index.html">Back to Homepage</a></footer>
+      <script>
+          var url = document.getElementById("url-target");
+          var urlObj = new window.URL(window.location.href);
+          document.getElementById("create").onclick = function () {
+              if (url.value.substring(0, 8) !== 'https://' && url.value.substring(0, 7) !== 'http://') {
+                  url.value = 'https://' + url.value.split('https://').pop();
+              } else if (url.value.substring(0, 7) == 'http://') {
+                  url.value = 'https://' + url.value.split('http://').pop();
+              };
+              win = window.open();
+              win.document.body.style.margin = "0";
+              win.document.body.style.height = "100vh";
+              var iframe = win.document.createElement("iframe");
+              iframe.style.border = "none";
+              iframe.style.width = "100%";
+              iframe.style.height = "100%";
+              iframe.style.margin = "0";
+              iframe.referrerpolicy = "no-referrer";
+              iframe.allow = "fullscreen";
+              iframe.src = url.value;
+              win.document.body.appendChild(iframe);
+              var script = win.document.createElement("script");
+              win.document.body.appendChild(script);
+          };
+      </script>
+  </body>
+</html>

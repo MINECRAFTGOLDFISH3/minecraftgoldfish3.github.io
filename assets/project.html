@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project | minecraftgoldfish3.github.io</title>
+        <style>
+            body, html {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+            #game-container {
+                width: 100%;
+                height: 100%;
+            }
+            .backbutton {
+                position: fixed;
+                top: 10px;
+                left: 10px;
+            }
+            footer {
+                text-align: center;
+                background-color: #efefef;
+                color: #000000;
+                padding: 10px;
+                font-size: 16px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                box-shadow: 0 0 12px #cccccc;
+            }
+            a {
+                color: #007dcc;
+                text-decoration: none;
+                font-family: Arial;
+            }
+            a:hover {
+                color: #016aad;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="game-container"></div>
+        <script>
+            function extractGameURL() {
+                var url = window.location.href;
+                if (url.indexOf('?') !== -1) {
+                    var queryString = url.split('?')[1];
+                    var parameters = queryString.split('&');
+                    for (var i = 0; i < parameters.length; i++) {
+                        var parameter = parameters[i];
+                        if (parameter.startsWith('url=')) {
+                            return parameter.substring(4);
+                        }
+                    }
+                }
+                return null;
+            }
+            function createIframe(gameURL) {
+                var iframe = document.createElement('iframe');
+                iframe.style.border = "none";
+                iframe.style.width = "100%";
+                iframe.style.height = "100%";
+                iframe.referrerpolicy = "no-referrer";
+                iframe.allow = "fullscreen";
+                iframe.src = gameURL;
+                document.getElementById('game-container').appendChild(iframe);
+            }
+            var gameURL = extractGameURL();
+            if (gameURL) {
+                createIframe(gameURL);
+            } else {
+                window.location.href = "404.html";
+            }
+        </script>
+    </body>
+</html>

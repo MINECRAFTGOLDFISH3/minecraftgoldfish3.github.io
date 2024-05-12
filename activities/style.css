@@ -1,0 +1,116 @@
+#left {
+    text-align: left;
+    position: absolute;
+    width: 250px;
+    height: 1000px;
+    background-color: #333333;
+    top: 75px;
+    left: 0px;
+    opacity: 0%;
+}
+#right {
+    text-align: right;
+    position: absolute;
+    width: 250px;
+    height: 1000px;
+    background-color: #333333;
+    top: 75px;
+    padding-right: 0px;
+    right: 0;
+    opacity: 0%;
+}
+#center {
+    text-align: center;
+    position: absolute;
+    width: 700px;
+    height: 1000px;
+    background-color: #454545;
+    top: 75px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+}
+#center2 {
+    text-align: center;
+    position: absolute;
+    height: 1000px;
+    background-color:#333333;
+    top: 75px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+body {
+    color: white;
+    background-color: #333333;
+    font-family: Arial;
+}
+
+header {
+    background-color: #454545;
+    top: 0px;
+    left: 0px;
+    right: 0;
+}
+
+#header-right {
+    display: inline-block;
+    text-align: right;
+    margin: 0px 20px;
+}
+
+a {
+    color: white;
+    font-family: Arial;
+}
+
+a:hover {
+    color: #d2d2d2;
+}
+
+#spacer {
+    height: 300px;
+}
+#spacer50 {
+    height: 50px;
+}
+
+#big {
+    font-size: 200%;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    background-color: #454545;
+    color: white;
+    height: 60px;
+    padding-top: 18px;
+    font-size: 16px;
+}
+
+iframe#game {
+    left: 0;
+    right: 0;
+}
+
+#gametile {
+    background-color: #454545;
+}
+
+#cookiepopup {
+    background-color: black;
+    position: fixed;
+    padding: 10px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    font-size: 80%;
+    width: auto;
+    text-align: center;
+}
