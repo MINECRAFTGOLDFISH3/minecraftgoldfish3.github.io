@@ -73,10 +73,10 @@
             }
             function cookiedismiss(id) {
                 document.getElementById(id).style.display = 'none';
-                setCookie('dismissed', true, '100');
+                setCookie('dismissed', 'true', '100');
             }
             var dismissed = getCookie('dismissed');
-            if (dismissed == true) {
+            if (dismissed == 'true') {
                 document.getElementById('cookiepopup').style.display = 'none';
             }
         </script>
