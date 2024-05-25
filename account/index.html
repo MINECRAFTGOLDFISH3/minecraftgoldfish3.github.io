@@ -39,22 +39,22 @@
                     <br /><h1 class="form_title">Sign Up</h1>
                     <div class="form_message form_message-error"></div>
                     <div class="form_input-group">
-                        <input type="text" class="form_input" autofocus placeholder="Username" />
+                        <input type="text" class="form_input" id="form_username" autofocus placeholder="Username" />
                         <div class="form_input-error-message"></div><br />
                     </div>
                     <div class="form_input-group">
-                        <input type="text" class="form_input" autofocus placeholder="Email Address" />
+                        <input type="text" class="form_input" id="form_email" autofocus placeholder="Email Address" />
                         <div class="form_input-error-message"></div><br />
                     </div>
                     <div class="form_input-group">
-                        <input type="password" class="form_input" autofocus placeholder="Password" />
+                        <input type="password" class="form_input" id="form_password" autofocus placeholder="Password" />
                         <div class="form_input-error-message"></div><br />
                     </div>
                     <div class="form_input-group">
-                        <input type="password" class="form_input" autofocus placeholder="Confirm Password" />
+                        <input type="password" class="form_input" id="form_confirm_p" autofocus placeholder="Confirm Password" />
                         <div class="form_input-error-message"></div><br />
                     </div>
-                    <button class="form_button" type="submit">Continue</button>
+                    <button class="form_button" type="submit" onclick="submit()">Continue</button>
                     <p class="form_text">
                         <a id="link_login" class="form-link">Already have an account? Log in instead.</a>
                     </p>

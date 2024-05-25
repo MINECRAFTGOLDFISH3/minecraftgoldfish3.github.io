@@ -1,16 +1,26 @@
 var formStatus = 'success'
-async function sendData() {
-    const formData = new FormData();
-    try {
-        const response = await fetch("https://minecraftgoldfish3.github.io/account/sent.html", {
-            method: "post",
-            body: formData,
-        });
-        console.log(await response.json());
-    } catch (e) {
-        console.error(e);
-        formStatus = 'error'
+// async function sendData() {
+    // const formData = new FormData();
+    // try {
+        // const response = await fetch("https://minecraftgoldfish3.github.io/account/sent.html", {
+            // method: "post",
+            // body: formData,
+        // });
+        // console.log(await response.json());
+    // } catch (e) {
+        // console.error(e);
+        // formStatus = 'error'
+    // }
+// }
+
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        expires = "; expires=" + date.toUTCString();
     }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
 
 function setFormMessage(formElement, type, message) {
@@ -56,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
             setFormMessage(loginForm, 'error', 'Invalid Password/Username Combination.');
         } else {
             window.location.href = "https://minecraftgoldfish3.github.io/account/sent.html";
+            setCookie('accountName');
         }
     })
 
