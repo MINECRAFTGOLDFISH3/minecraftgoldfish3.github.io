@@ -42,12 +42,12 @@
                 setCookie('title', document.getElementById('title').value, '100');
                 setCookie('favicon', document.getElementById('favicon').value, '100');
             }
+            function eraseCookie(name) {
+                document.cookie = name + "=; Max-Age=-99999;";
+            }
             function reset() {
                 eraseCookie('title');
                 eraseCookie('favicon');
-            }
-            function eraseCookie(name) {
-                document.cookie = name + "=; Max-Age=-99999;";
             }
         </script>
         <script src="../js/main.js"></script>
