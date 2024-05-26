@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Settings | minecraftgoldfish3.github.io</title>
+        <link rel="stylesheet" href="../css/style.css" />
+        <style>
+            .tabcloak-btn {
+                transform: translate(-20px, 1px);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="center">
+            <br />
+            <h1>Settings</h1> <hr />
+            <h2>Tab Cloaker:</h2>
+            <p>Sets the title and favicon of the site to something different. Expires in 30 days.</p>
+            <h3>Title Changer</h3>
+            <p>Enter the title of the site you want to appear.</p>
+            <input id="title" /><button class="med-btn tabcloak-btn" onclick="apply()">Apply</button>
+            <h3>Favicon Changer</h3>
+            <p>Enter a web url of a .png or .ico file you want to appear as the favicon of the site. (Example: https://www.google.com/favicon.ico)</p>
+            <input id="favicon" /><button class="med-btn tabcloak-btn" onclick="apply()">Apply</button> <br />
+            <button class="med-btn" onclick="reset()">Reset All</button>
+            <div class="spacer"></div>
+        </div>
+        <footer>
+            <a href="/">Back to Homepage</a>
+        </footer>
+        <script>
+            function setCookie(name, value, days) {
+                var expires = "";
+                if (days) {
+                    var date = new Date();
+                    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            }
+            function apply() {
+                setCookie('title', document.getElementById('title').value, '100');
+                setCookie('favicon', document.getElementById('favicon').value, '100');
+            }
+            function reset() {
+                eraseCookie('title');
+                eraseCookie('favicon');
+            }
+            function eraseCookie(name) {
+                document.cookie = name + "=; Max-Age=-99999;";
+            }
+        </script>
+        <script src="../js/main.js"></script>
+    </body>
+</html>

@@ -3,46 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Save/Load | minecraftgoldfish3.github.io</title>
-        <link rel="stylesheet" href="../style.css" />
-        <style>
-            #big-btn {
-                background-color: #ccf8ff;
-                color: #333333;
-                padding: 10px 30px;
-                font-size: 20px;
-                border: 2px solid #77e1f2;
-                cursor: pointer;
-                border-radius: 5px;
-                margin: 10px;
-                transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-                text-align: center;
-                transform: translateX(0px);
-            }
-                #big-btn:hover {
-                    background-color: #77e1f2;
-                    color: #666666;
-                    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-                }
-            input {
-                height: 40px;
-                border-radius: 0px;
-                border: none;
-                color: #333333;
-                background-color: #ccf8ff;
-                padding: 0 15px;
-                margin-bottom: 10px;
-                transition: background-color 0.3s ease;
-            }
-                input:focus {
-                    outline: none;
-                    background-color: #77e1f2;
-                }
-
-                input:hover {
-                    background-color: #77e1f2;
-                    transition: background-color 0.3s ease;
-                }
-        </style>
+        <link rel="stylesheet" href="../css/style.css" />
     </head>
     <body>
         <div id="center">
@@ -51,15 +12,15 @@
             <h2>Saving your site data:</h2>
             <p>Your actions on the site are automatically saved as <a href="../miscellaneous/cookies.html">cookies.</a></p><p>Although this is the case, your site data will get deleted in about <b>30</b> days with no site activity. To manually save your data, click on the button below.</p>
             <p><b>Note:</b> this does not save your game data.</p>
-            <button id="big-btn" onclick="save()">Save</button>
+            <button class="big-btn" onclick="save()">Save</button>
             <h2>Loading your site data:</h2>
             <p>Click on your 'data.txt' file and edit it. Select all the text. Then, copy this text. Paste it in the textbox below, and click load.</p>
             <p><b>Warning:</b> this will override all current site data. Make sure that you are loading the correct file.</p>
             <input type="text" name="cookie-input" id="cookie-input" /><br />
-            <button id="big-btn" onclick="load()">Load</button>
+            <button class="big-btn" onclick="load()">Load</button>
             <h2>Resetting your site data:</h2>
             <p>Make sure to back up your data before doing this.</p>
-            <button id="big-btn" onclick="reset()">Reset Everything</button>
+            <button class="big-btn" onclick="reset()">Reset Everything</button>
             <div class="spacer300"></div><div class="spacer300"></div>
         </div>
         <footer>
@@ -111,5 +72,6 @@
                 }
             }
         </script>
+        <script src="../js/main.js"></script>
     </body>
 </html>

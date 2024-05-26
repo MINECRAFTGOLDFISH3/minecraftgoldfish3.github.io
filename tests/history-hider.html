@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>History Hider | minecraftgoldfish3.github.io</title>
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body>
+        <div id="center">
+            <br />
+            <h1>History Hider</h1> <hr />
+            <p>This is to flow your history with another site to hide this site on it. The first textbox is the site you want to appear in your history, and the second textbox is the amount of times to appear in your history.</p>
+            <input id="url" placeholder="Enter a URL..." /><input id="number" placeholder="Enter a Number..." /><button onclick="historyHide()">Enter</button>
+            <div class="spacer300"></div><div class="spacer300"></div>
+        </div>
+        <footer>
+            <a href="/">Back to Homepage</a>
+        </footer>
+        <script>
+            var url = document.getElementById("url");
+            function historyHide() {
+                if (url.value.substring(0, 8) !== 'https://' && url.value.substring(0, 7) !== 'http://') {
+                    url.value = 'https://' + url.value.split('https://').pop();
+                } else if (url.value.substring(0, 7) == 'http://') {
+                    url.value = 'https://' + url.value.split('http://').pop();
+                };
+                var num = document.getElementById('number').value;
+                url = document.getElementById('url').value;
+                done = false;
+                for (var i = 1; i <= num; i++) {
+                    history.pushState(0, 0, i == num ? x : i.toString());
+                    if (i == num) {
+                        done = true
+                    }
+                }
+                if (done == true) {
+                    alert("Success!")
+                }
+            }
+        </script>
+        <script src="../js/main.js"></script>
+    </body>
+</html>
