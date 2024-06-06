@@ -22,4 +22,6 @@ if (!(faviconLink == null)) {
     }
     link.href = faviconLink;
 }
-var accountName = getCookie('accountName');
+//var accountName = getCookie('accountName');
+
+window.location.href = 'https://teacherease.net';
