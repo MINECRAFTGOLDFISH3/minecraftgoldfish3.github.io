@@ -130,7 +130,7 @@
     </head>
     <body>
         <header>
-            <a href="/">Home</a> | <a href="./all.html">All Games</a> <a href="./unity.html">Unity Games</a> <a href="./io.html">Io Games</a> <a href="./html5.html">HTML5 Games</a> <a href="./ruffle.html">Flash Games</a> | <a href="./misc.html">Miscellaneous</a>
+            <a href="/">Home</a> | <a href="/all.html">All Games</a> <a href="/unity.html">Unity Games</a> <a href="/io.html">Io Games</a> <a href="/html5.html">HTML5 Games</a> <a href="/ruffle.html">Flash Games</a> | <a href="/misc.html">Miscellaneous</a>
         </header>
         <div id="left"></div>
         <div id="center">
@@ -144,32 +144,6 @@
             document.getElementById('form').style.display = 'none';
             function showForm(id) {
                 document.getElementById(id).style.display = 'block';
-            }
-        </script>
-        <script>
-            function getCookie(name) {
-                var nameEQ = name + "=";
-                var ca = document.cookie.split(";");
-                for (var i = 0; i < ca.length; i++) {
-                    var c = ca[i];
-                    while (c.charAt(0) == " ") c = c.substring(1, c.length);
-                    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-                }
-                return null;
-            }
-            var pageTitle = getCookie('title');
-            if (!(pageTitle == null)) {
-                document.title = pageTitle
-            }
-            var faviconLink = getCookie('favicon');
-            if (!(faviconLink == null)) {
-                var link = document.querySelector("link[rel~='icon']");
-                if (!link) {
-                    link = document.createElement('link');
-                    link.rel = 'icon';
-                    document.head.appendChild(link);
-                }
-                link.href = faviconLink;
             }
         </script>
         <script src="/js/main.js"></script>
