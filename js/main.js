@@ -22,4 +22,3 @@ if (!(faviconLink == null)) {
     }
     link.href = faviconLink;
 }
-//var accountName = getCookie('accountName');

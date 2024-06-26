@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Settings | minecraftgoldfish3.github.io</title>
-        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="css/style.css" />
         <style>
             .tabcloak-btn {
                 transform: translate(-20px, 1px);
@@ -11,9 +11,8 @@
         </style>
     </head>
     <body>
-        <div id="center">
-            <br />
-            <h1>Settings</h1> <hr />
+        <div class="center">
+            <h1>Settings</h1>
             <h2>Tab Cloaker:</h2>
             <p>Sets the title and favicon of the site to something different. Expires in 30 days.</p>
             <h3>Title Changer</h3>
@@ -23,6 +22,15 @@
             <p>Enter a web url of a .png or .ico file you want to appear as the favicon of the site. (Example: https://www.google.com/favicon.ico)</p>
             <input id="favicon" /><button class="med-btn tabcloak-btn" onclick="apply()">Apply</button> <br />
             <button class="med-btn" onclick="reset()">Reset All</button>
+            <h1>Save/Load your Data</h1>
+            <h2>Saving your site data:</h2>
+            <p>Your actions on the site are automatically saved as <a href="other/cookies.html">cookies.</a></p><p>To manually save your data, click on the button below.</p>
+            <p><b>Note:</b> this does not save your game data.</p>
+            <button class="big-btn" onclick="window.open('https://assets99.netlify.app/minecraftgoldfish3/more/data/save.html');">Save</button>
+            <h2>Loading your site data:</h2>
+            <p>Click on your 'data.txt' file and edit it. Select all the text. Then, copy this text. Paste it in the textbox, and click load.</p>
+            <p><b>Warning:</b> this will override all current site data. Make sure that you are loading the correct file.</p>
+            <button class="big-btn" onclick="window.open('https://assets99.netlify.app/minecraftgoldfish3/more/data/load.html');">Load</button>
             <div class="spacer"></div>
         </div>
         <footer>

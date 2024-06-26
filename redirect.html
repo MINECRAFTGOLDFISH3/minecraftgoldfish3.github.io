@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Redirecting...</title>
+        <link id="theme-link" rel="stylesheet" href="css/style.css">
+        <style>
+            button:disabled {
+                opacity: 50%;
+                cursor: default;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="center">
+            <h1>Redirecting...</h1>
+            <p id="text"></p>
+            <p id="warning" style="color: red;"></p>
+            <div class="container">
+                <button id="continue" class="big-btn" onclick="window.location.href = url;">Continue</button><br />
+            </div>
+            <div class="spacer300"></div>
+        </div>
+        <footer>
+            <a href="/">Back to Homepage</a>
+        </footer>
+        <script>
+            function extractURL() {
+                var url = window.location.href;
+                if (url.indexOf('?') !== -1) {
+                    var queryString = url.split('?')[1];
+                    var parameters = queryString.split('&');
+                    for (var i = 0; i < parameters.length; i++) {
+                        var parameter = parameters[i];
+                        if (parameter.startsWith('url=')) {
+                            return parameter.substring(4);
+                        }
+                    }
+                }
+                return null;
+            }
+            function extractType() {
+                var url = window.location.href;
+                if (url.indexOf('?') !== -1) {
+                    var queryString = url.split('?')[1];
+                    var parameters = queryString.split('&');
+                    for (var i = 0; i < parameters.length; i++) {
+                        var parameter = parameters[i];
+                        if (parameter.startsWith('type=')) {
+                            return parameter.substring(5);
+                        }
+                    }
+                }
+                return null;
+            }
+            var url = extractURL();
+            var type = extractType();
+            document.getElementById("continue").disabled = true;
+            if (url == null) {
+                document.getElementById('text').innerHTML = 'This webpage was not supposed to be accessed without a redirect URL.';
+            } else {
+                document.getElementById('text').innerHTML = 'You are being redirected to ' + `<a href=\"` + url + `\">` + url + `</a>` + ' in ' + 5 + ' seconds.';
+                if (type == 'external') {
+                    document.getElementById('warning').innerHTML = 'Warning: this site is an external site, so be careful.';
+                }
+                var countdown = 4;
+                var timer = setInterval(function () {
+                    if (countdown <= 0) {
+                        clearInterval(timer);
+                        document.getElementById('text').innerHTML = 'You are being redirected to ' + `<a href=\"` + url + `\">` + url + `</a>` + ' in ' + countdown + ' seconds.';
+                        countdown = 0;
+                        document.getElementById("continue").disabled = false;
+                    } else {
+                        document.getElementById('text').innerHTML = 'You are being redirected to ' + `<a href=\"` + url + `\">` + url + `</a>` + ' in ' + countdown + ' seconds.'
+                    }
+                    countdown -= 1;
+                }, 1000);
+            }
+        </script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>
