@@ -156,9 +156,9 @@ input {
 
 /* CSS for each game item/card */
 .game-item {
-    background-color: #ffffcc; /* Light yellow background */
+    background-color: #cfcfcd;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
@@ -166,8 +166,8 @@ input {
 
 /* CSS for hover effect on game item/card */
 .game-item:hover {
-    transform: translateY(-5px) scale(1.02); /* Scaling up slightly on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Increasing shadow on hover */
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* CSS for game images within the cards */
