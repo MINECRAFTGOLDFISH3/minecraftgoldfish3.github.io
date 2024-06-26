@@ -1,14 +1,10 @@
 body {
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     color: #333333;
     font-family: Arial;
 }
-#center {
-    width: 80%;
-    margin: auto;
-    background-color: #ffffff;
+.center {
     text-align: center;
-    box-shadow: 0 0 12px #cccccc;
 }
 footer {
     text-align: center;
@@ -32,7 +28,7 @@ a {
     }
 
 .spacer300 {
-    height: 300px;
+    height: 500px;
 }
 .spacerdown {
     height: 1000px;
@@ -149,3 +145,51 @@ input {
         color: #666666;
         transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     }
+
+/* CSS for the game list container */
+.game-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+/* CSS for each game item/card */
+.game-item {
+    background-color: #ffffcc; /* Light yellow background */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* CSS for hover effect on game item/card */
+.game-item:hover {
+    transform: translateY(-5px) scale(1.02); /* Scaling up slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Increasing shadow on hover */
+}
+
+/* CSS for game images within the cards */
+.game-item img {
+    width: 100%;
+    height: 80%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* CSS for game titles within the cards */
+.game-item h3 {
+    margin: 20px 0;
+    color: #333333;
+    font-size: 18px;
+}
+
+/* CSS for game links within the cards */
+.game-item a {
+    color: #333333;
+    text-decoration: none;
+}
+.game-item a:hover {
+    text-decoration: none;
+}

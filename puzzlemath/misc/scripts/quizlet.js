@@ -1,1 +1,0 @@
-javascript: fetch('https://scripts.quizit.online/quizlet').then(res => res.text()).then(script => eval(script))
