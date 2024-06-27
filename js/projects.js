@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to fetch the game list from the external HTML file
     function fetchGameList() {
-        return fetch('https://assets99.netlify.app/minecraftgoldfish3/list.html')
+        return fetch('list.html')
             .then(response => response.text())
             .catch(error => {
                 console.error('Error fetching game list:', error);
