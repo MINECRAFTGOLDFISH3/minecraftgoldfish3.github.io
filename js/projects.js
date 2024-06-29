@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const gameList = document.getElementById('game-list');
 
     // Ensure gamedomain is set
-    var gamedomain = 'assets99.netlify.app';
+    var gamedomain = 'assets.illuminating.us';
 
     // Function to fetch the game list from the external HTML file
     function fetchGameList() {
