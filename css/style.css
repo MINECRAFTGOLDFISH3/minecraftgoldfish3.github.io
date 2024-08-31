@@ -39,13 +39,13 @@ a {
     height: 60px;
 }
 
-#button {
+.button {
     font-weight: bold;
     width: 800px;
     margin: 40px auto 0 auto;
 }
 
-    #button a {
+    .button a {
         -webkit-transition: all 200ms ease-out;
         -ms-transition: all 200ms ease-out;
         transition: all 200ms ease-out;
@@ -57,14 +57,14 @@ a {
         background-color: #45c1cc;
     }
 
-        #button a:hover {
+        .button a:hover {
             -webkit-transition: all 200ms ease-out;
             -ms-transition: all 200ms ease-out;
             transition: all 200ms ease-out;
             background-color: #348699;
             padding: 20px 40px;
         }
-#cookiepopup {
+.cookiepopup {
     background-color: black;
     color: white;
     position: fixed;
@@ -77,13 +77,13 @@ a {
     text-align: center;
     box-shadow: 0 0 20px #333333;
 }
-#accounts_link {
+.accounts_link {
     position: absolute;
     top: 10px;
     right: 140px;
 
 }
-#apps_link {
+.apps_link {
     position: absolute;
     top: 10px;
     right: 140px;
