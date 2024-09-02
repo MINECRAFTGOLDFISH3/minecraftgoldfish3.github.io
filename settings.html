@@ -23,12 +23,12 @@
             <p>Enter a web url of a .png or .ico file you want to appear as the favicon of the site. (Example: https://www.google.com/favicon.ico)</p>
             <input id="favicon" /><button class="med-btn tabcloak-btn" onclick="apply()">Apply</button> <br />
             <button class="med-btn" onclick="reset()">Reset All</button>
-            <h1>Save/Load your Data</h1>
-            <h2>Saving your site data:</h2>
+            <h2>Save/Load your Data</h2>
+            <h3>Saving your site data:</h3>
             <p>Your actions on the site are automatically saved as cookies.</p><p>To manually save your data, click on the button below.</p>
             <p><b>Note:</b> this does not save your game data.</p>
             <button class="big-btn" onclick="window.open('https://assets.illuminating.us/minecraftgoldfish3/more/data/save.html');">Save</button>
-            <h2>Loading your site data:</h2>
+            <h3>Loading your site data:</h3>
             <p>Click on your 'data.txt' file and edit it. Select all the text. Then, copy this text. Paste it in the textbox, and click load.</p>
             <p><b>Warning:</b> this will override all current site data. Make sure that you are loading the correct file.</p>
             <button class="big-btn" onclick="window.open('https://assets.illuminating.us/minecraftgoldfish3/more/data/load.html');">Load</button>
@@ -48,11 +48,11 @@
                 document.cookie = name + "=" + (value || "") + expires + "; path=/";
             }
             function apply() {
-                setCookie('title', document.getElementById('title').value, '100');
-                setCookie('favicon', document.getElementById('favicon').value, '100');
+                setCookie('title', document.getElementById('title').value, '30');
+                setCookie('favicon', document.getElementById('favicon').value, '30');
             }
             function eraseCookie(name) {
-                document.cookie = name + "=; Max-Age=-99999;";
+                setCookie(name, 'temp', '-99999');
             }
             function reset() {
                 eraseCookie('title');
