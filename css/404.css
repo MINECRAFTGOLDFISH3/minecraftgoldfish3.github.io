@@ -1,0 +1,15 @@
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial;
+    text-align: center;
+}
+a {
+    color: #007dcc;
+    text-decoration: none;
+}
+a:hover {
+    color: #016aad;
+    text-decoration: underline;
+    cursor: pointer;
+}
