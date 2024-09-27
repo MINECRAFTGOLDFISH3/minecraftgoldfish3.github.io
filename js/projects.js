@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const gameList = document.getElementById('game-list');
 
     // Ensure gamedomain is set
-    var gamedomain = 'assets.illuminating.us';
+    var gamedomain = 'projectassets.teacherease.net';
 
     // Function to fetch the game list from the external HTML file
     function fetchGameList() {
