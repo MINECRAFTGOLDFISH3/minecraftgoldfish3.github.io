@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Random Number Generator | minecraftgoldfish3</title>
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <div class="center">
+            <h1>Random Number Generator</h1>
+            <p>Generates a random number from the minimum to maximum.</p>
+            <div>
+                <label for="min">Minimum:</label>
+                <input type="number" id="min" value="0" />
+                <label for="max">Maximum:</label>
+                <input type="number" id="max" value="10" />
+            </div>
+            <button onclick="generate()" class="med-btn">Generate</button>
+            <p id="number"></p>
+        </div>
+        <div class="spacer300"></div>
+        <footer><a href="/">Back to Homepage</a></footer>
+        <script>
+            function generate() {
+                var min = document.getElementById('min').value;
+                var max = document.getElementById('max').value;
+                var number = Math.round(max - ((Math.random()) * (max - min)));
+                document.getElementById('number').innerHTML = number;
+            }
+        </script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>

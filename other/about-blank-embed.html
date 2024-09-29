@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>About:Blank Embedder | minecraftgoldfish3</title>
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <div class="center">
+            <h1>About:Blank Embedder</h1>
+            <p>Enter a URL to be embedded in an about:blank page below.</p>
+            <p><input id="url-target" placeholder="Enter a URL..." autocomplete="on" type="text" autofocus /></p>
+            <button id="create" class="med-btn">Create page</button>
+            <button onclick="document.getElementById('url-target').value = ''" class="med-btn">Clear input</button>
+            <div class="spacer300"></div>
+            <h1>How it works:</h1>
+            <p>The about:blank embedder works by putting a full screen iframe or an embedded page inside an about:blank page. Not all websites will work since not all websites are able to be embedded with an iframe. The about:blank page will not be shown in your history, which adds extra security to the sites you are using. To add extra security to this site, you can just put the url of this site in the input above, or simply use the about:blank link in the navigation bar above.</p>
+            <div class="spacer"></div>
+        </div>
+        <footer><a href="/">Back to Homepage</a></footer>
+        <script>
+            var url = document.getElementById("url-target");
+            var urlObj = new window.URL(window.location.href);
+            document.getElementById("create").onclick = function () {
+                if (url.value.substring(0, 8) !== 'https://' && url.value.substring(0, 7) !== 'http://') {
+                    url.value = 'https://' + url.value.split('https://').pop();
+                } else if (url.value.substring(0, 7) == 'http://') {
+                    url.value = 'https://' + url.value.split('http://').pop();
+                };
+                win = window.open();
+                win.document.body.style.margin = "0";
+                win.document.body.style.height = "100vh";
+                var iframe = win.document.createElement("iframe");
+                iframe.style.border = "none";
+                iframe.style.width = "100%";
+                iframe.style.height = "100%";
+                iframe.style.margin = "0";
+                iframe.referrerpolicy = "no-referrer";
+                iframe.allow = "fullscreen";
+                iframe.src = url.value;
+                win.document.body.appendChild(iframe);
+                var script = win.document.createElement("script");
+                script.src = "/js/main.js";
+                win.document.body.appendChild(script);
+            };
+        </script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>

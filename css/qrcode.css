@@ -1,0 +1,35 @@
+textarea {
+    width: 400px;
+    height: 40px;
+    border-radius: 0px;
+    border: none;
+    color: #333333;
+    background-color: #ccf8ff;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+    font-family: Arial;
+}
+
+    textarea:focus {
+        outline: none;
+        background-color: #77e1f2;
+    }
+
+    textarea:hover {
+        background-color: #77e1f2;
+        transition: background-color 0.3s ease;
+    }
+
+select {
+    display: block;
+    width: 20%; 
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #333333;
+}

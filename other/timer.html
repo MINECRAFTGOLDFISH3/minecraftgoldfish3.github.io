@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Timer | minecraftgoldfish3</title>
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <div class="center">
+            <h1>Timer</h1>
+            <p id="text"></p>
+            <label for="time">Time: </label>
+            <input id="time" type="number" placeholder="Enter a number..." value="" /><br />
+            <a href="javascript: var timer = document.getElementById('time').value; window.location.href = 'timer.html?time=' + timer;">Set Time</a><br />
+            <button id="start" onclick="start()" class="med-btn">Start</button>
+        </div>
+        <div class="spacer300"></div>
+        <footer><a href="/">Back to Homepage</a></footer>
+        <script>
+            function extractTime() {
+                var url = window.location.href;
+                if (url.indexOf('?') !== -1) {
+                    var queryString = url.split('?')[1];
+                    var parameters = queryString.split('&');
+                    for (var i = 0; i < parameters.length; i++) {
+                        var parameter = parameters[i];
+                        if (parameter.startsWith('time=')) {
+                            return parameter.substring(5);
+                        }
+                    }
+                }
+                return null;
+            }
+            document.getElementById('text').innerHTML = extractTime();
+            document.getElementById('time').value = extractTime();
+            var pause = 2;
+            function start() {
+                var stop = 0;
+                if (pause == 1 && stop == 0) {
+                    pause = 0;
+                    stop = 1;
+                }
+                if (pause == 0 && stop == 0) {
+                    pause = 1;S
+                    stop = 1;
+                }
+                if (pause == 2) {
+                    pause = 0;
+                    var time = extractTime();
+                    if (time == null || time == '') {
+                        document.getElementById('text').innerHTML = 'No time is set.';
+                    } else {
+                        document.getElementById('text').innerHTML = time;
+                        var countdown = time;
+                        var timer = setInterval(function () {
+                            if (countdown <= 0) {
+                                clearInterval(timer);
+                                document.getElementById('text').innerHTML = '0';
+                                countdown = 0;
+                            } else {
+                                document.getElementById('text').innerHTML = countdown;
+                                if (pause == 0) {
+                                    document.getElementById('start').innerHTML = 'Stop';
+                                }
+                                if (pause == 1) {
+                                    document.getElementById('start').innerHTML = 'Resume';
+                                }
+                            }
+                            if (pause == 0) {
+                                countdown -= 1;
+                            }
+                        }, 1000);
+                    }
+                }
+                stop = 0;
+            }
+        </script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>

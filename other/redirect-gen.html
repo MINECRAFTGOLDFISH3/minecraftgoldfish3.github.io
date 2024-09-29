@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Redirect Generator | minecraftgoldfish3</title>
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <div class="center">
+            <h1>Redirect Generator</h1>
+            <p>Enter a URL to redirect:</p>
+            <input id="redirect-gen" type="text" placeholder="Enter a URL..." autofocus />
+            <p>External Redirect: <input id="type" type="checkbox" checked="checked" style="font-size: 50%" /></p>
+            <button onclick="redirect();" class="med-btn">Enter</button>
+        </div>
+        <div class="spacer300"></div>
+        <footer><a href="/">Back to Homepage</a></footer>
+        <script>
+            function redirect() {
+                var url = document.getElementById('redirect-gen').value;
+                var type = '';
+                if (document.getElementById('type').checked == true) {
+                    type = 'external';
+                } else {
+                    type = 'internal'
+                }
+                window.location.href = '/redirect.html?url=' + url + '&type=' + type;
+            }
+        </script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>
