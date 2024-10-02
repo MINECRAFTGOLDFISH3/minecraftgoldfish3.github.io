@@ -1,3 +1,28 @@
+//cookie setup
+
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(";");
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == " ") c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+//flash game setup
+
 function extractFlashGameURL(href) {
     var url = href;
     if (url.indexOf('#') !== -1) {
@@ -13,12 +38,18 @@ function extractFlashGameURL(href) {
     return null;
 }
 
+//the real stuff
+
 document.addEventListener('DOMContentLoaded', () => {
     const loadingIndicator = document.getElementById('loading');
     const gameList = document.getElementById('game-list');
 
-    // Ensure gamedomain is set
-    var gamedomain = 'projectassets.teacherease.net';
+    // Ensure gamedomain cookie is set
+    var gamedomain = getCookie('gamedomain');
+    if (!gamedomain) {
+        gamedomain = "projectassets.teacherease.net";
+        setCookie('gamedomain', gamedomain, 365);
+    }
 
     // Function to fetch the game list from the external HTML file
     function fetchGameList() {
