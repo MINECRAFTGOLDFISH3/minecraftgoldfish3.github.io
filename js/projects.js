@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to fetch the game list from the external HTML file
     function fetchGameList() {
-        return fetch('list.html')
+        return fetch('https://extra.illuminating.us/tests/list.html')
             .then(response => response.text())
             .catch(error => {
                 console.error('Error fetching game list:', error);
