@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to fetch the game list from the external HTML file
     function fetchGameList() {
-        return fetch(`https://${gamedomain}/minecraftgoldfish3/projects/list.html`, {mode: 'no-cors'}) 
+        return fetch(`list.html`, {mode: 'no-cors'}) //https://${gamedomain}/minecraftgoldfish3/projects/
             .then(response => response.text())
             .catch(error => {
                 console.error('Error fetching game list:', error);
